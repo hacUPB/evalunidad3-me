@@ -11,11 +11,13 @@ int main (int argc, char* argv[]){
     strategyA_t *strategyA_new();
 
     DoSomeBusinessLogic(strategy);
-    DoSomeBusinessLogic((strategy_t*)strategyA;
+    DoSomeBusinessLogic((strategy_t*)strategyA);
 
     strategy_dtor(strategy);
     free(strategy);
 
-    strategyA_dtor(strategyA)
+    strategyA_dtor(strategyA);
     free(strategyA);
+
+    return EXIT_SUCCESS;
 }

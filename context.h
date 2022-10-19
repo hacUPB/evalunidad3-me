@@ -1,4 +1,4 @@
-#ifdef CONTEXT_H_
+#ifndef CONTEXT_H_
 #define CONTEXT_H_
 
 
@@ -10,7 +10,7 @@ typedef struct {
 
 }strategy_t;
 
-strategy_t * strategy_new();
+strategy_t *strategy_new();
 
 void strategy_ctor(strategy_t*);
 void strategy_dtor(strategy_t*);

@@ -1,4 +1,4 @@
-#ifdef CONCRETESTRATEGYA_H_
+#ifndef CONCRETESTRATEGYA_H_
 #define CONCRETESTRATEGYA_H_
 #include "context.h"
 
