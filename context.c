@@ -5,8 +5,11 @@
 
 
 void __DoSomeBusinessLogic(void *this){
-    strategy_t* strategy = (strategy_t *)this;
-    printf("%s = a, b, c, d, e\n", strategy->list)
+
+    Context *context = (Context *)malloc(sizeof(Context));
+
+    printf("Context: Sorting data using the strategy (not sure how it'll do it) %s\n");
+    char list[] = {"a", "b", "c", "d", "e"};
 
     strategy_t *strategy_new(){
         return (strategy_t *)malloc(sizeof(strategy_t));
