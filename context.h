@@ -2,19 +2,18 @@
 #define CONTEXT_H_
 
 
-typedef void(*strategy_func_t)(void *);
+typedef struct{
 
-typedef struct {
-    char *list;
-    strategy_func_t strategy_func;
+    char *data;
+    IStrategy *_strategy;
+}IStrategy;
 
-}strategy_t;
+void SetStrategy(IStrategy *);
 
-strategy_t *strategy_new();
+void DoSomeBussinesLogic(IStrategy *);
 
-void strategy_ctor(strategy_t*);
-void strategy_dtor(strategy_t*);
+void context_ctor(IStrategy *);
 
-void DoSomeBusinessLogic(strategy_t*);
+void context_dtor(IStrategy *);
 
 #endif
