@@ -16,7 +16,7 @@ object_t* DoAlgorithmA_new(){
 
 void DoAlgorithmA_ctor(objA *this) {
     object_ctor((object_t *)this);
-    strcpy(this->object.Data);
+    strcpy(this->object.data);
     this->DoAlgorithm.object_S = __objectA;
    
 }
