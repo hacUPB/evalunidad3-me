@@ -1,23 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "istrategy.h"
+#include "concreteStrategyA.h"
+#include "concreteStrategyB.h"
 #include "context.h"
-#include "ConcreteStrategyA.h"
 
 int main (int argc, char* argv[]){
-    strategy_t *strategy = strategy_new();
-    strategy_ctor(strategy);
 
-    strategyA_t *strategyA_new();
+    object_t *object = object_new();
+    object_ctor(object);
 
-    DoSomeBusinessLogic(strategy);
-    DoSomeBusinessLogic((strategy_t*)strategyA);
+    DoAlgorithmA_t *objA = DoAlgorithmA_new();
+    DoAlgorithmA_ctor(objA);
 
-    strategy_dtor(strategy);
-    free(strategy);
+    DoAlgorithmB_t *objB = DoAlgorithmtB_new();
+    DoAlgorithmB_ctor(objB);
 
-    strategyA_dtor(strategyA);
-    free(strategyA);
+    object_S(object);
+    object_S((object_t *)objA);
+    object_S((object_t *)objB);
+
+    object_dtor(object);
+    free(object);
+
+    DoAlgorithmA_dtor(objA);
+    free(objA);
+
+    DoAlgorithmB_dtor(objB);
+    free(objB);
 
     return EXIT_SUCCESS;
 }
