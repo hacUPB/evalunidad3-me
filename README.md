@@ -22,7 +22,7 @@ Strategy: Funciona como el Animal en los ejercicios dados en clase, en donde vie
 
 ConcreteStategys: Vienen siendo el "Gato y el pato" en el ejercicio de clase en donde se presenta por asi decirlo la opcion A y B para que el codigo lo ejecute.
 
-Context:
+Context: Usando el ejemplo del codigo de Gun se encuentra una cadena de caracteres donde ira guardada los elementos de la lista, y de esta forma con los concreteStrategy, se vera la lista en orden ascencente o viceversa. 
 
 Que se aplico:
 
